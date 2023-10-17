@@ -62,7 +62,7 @@ function Sidebar() {
           </div>
         </div>
       }
-      docked={false}
+      docked={true}
     >
       <div></div>
     </ReactSidebar>

@@ -1,11 +1,13 @@
 "use client";
-import Sidebar from "@/components/Sidebar";
+import Menu from "@/components/Menu";
 import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-blue-400">
-        <Sidebar />
-    </div>
+    <>
+      <main className="bg-green-50 grid grid-flow-col">
+        <Menu />
+      </main>
+    </>
   );
 }
