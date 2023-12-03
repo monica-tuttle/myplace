@@ -6,6 +6,9 @@ export default function Menu() {
   return (
     <nav className="w-64 bg-green-200 h-screen mr-10">
       <ul className="w-2/3 m-auto text-center">
+        <li className="mt-5">
+          <Link href="/">MONICA TUTTLE</Link>
+        </li>
         <li>
           <Image
             src="/images/profile_pic.jpeg"
@@ -15,7 +18,6 @@ export default function Menu() {
             className="mt-6 mb-5 rounded-md"
           />
         </li>
-        <Link href="/">MONICA TUTTLE</Link>
         <li className="mt-1">
           <Link href="projects">PROJECTS</Link>
           <ul className="m-4">
@@ -25,6 +27,8 @@ export default function Menu() {
             <li>Project 4</li>
             <li>Project 5</li>
             <li>Project 6</li>
+            <li>Project 7</li>
+            <li>Project 8</li>
           </ul>
         </li>
         <li>
@@ -47,7 +51,10 @@ export default function Menu() {
           </Link>
         </button>
         <button className="w-8 h-8 mx-2 mt-3">
-          <Link href="https://www.linkedin.com/in/monica-tuttle/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/monica-tuttle/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -59,7 +66,10 @@ export default function Menu() {
           </Link>
         </button>
         <button className="mt-0.5 ml-0.5">
-          <Link href="https://github.com/monica-tuttle/coding_portfolio" target="_blank">
+          <Link
+            href="https://github.com/monica-tuttle/coding_portfolio"
+            target="_blank"
+          >
             <Image
               src="/images/github-mark.png"
               alt="GitHub Logo"
