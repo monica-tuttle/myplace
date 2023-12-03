@@ -19,13 +19,12 @@ export default function Menu() {
         <li className="mt-1">
           <Link href="projects">PROJECTS</Link>
           <ul className="m-4">
-            <li>Connect Four</li>
-            <li>Pothole Patrol</li>
-            <li>Swipe-n-Hire</li>
-            <li>Data Viz in R</li>
-            <li>Time Series Forecasting in Python</li>
-            <li>Refuge Restrooms</li>
-            <li>Data Storytelling in Tableau</li>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+            <li>Project 4</li>
+            <li>Project 5</li>
+            <li>Project 6</li>
           </ul>
         </li>
         <li>
