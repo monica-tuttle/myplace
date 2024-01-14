@@ -7,7 +7,7 @@ function Sidebar() {
   return (
     <ReactSidebar
       sidebar={
-        <div className="p-5 bg-green-100 text-center h-screen">
+        <div className="p-5 bg-green-100 text-center h-screen lg: hidden">
           <ul>
             <li>
               <Image

@@ -1,155 +1,35 @@
-"use client";
+// Projects.js
 import Menu from "@/components/Menu";
 import React from "react";
+import Card from "@/components/Card";
 
 function Projects() {
+  const cardsData = [
+    {
+      imageSrc: "https://source.unsplash.com/random/400x200",
+      title: "Card Title 1",
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, dolores?",
+    },
+    // Add more card data as needed
+  ];
+
+  // Duplicate the card data to have a total of 8 cards
+  const duplicatedCardsData = Array.from({ length: 8 }, (_, index) => cardsData[index % cardsData.length]);
+
   return (
     <>
-      <main className="bg-green-50 grid grid-cols-5">
-        <Menu />
-        <div class="max-w-sm m-2 overflow-hidden rounded shadow-lg">
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
+      <main className="bg-green-50 flex flex-wrap">
+        <div className="w-full md:w-1/3 lg:w-1/4">
+          <Menu />
         </div>
-        <div class="max-w-sm m-2 overflow-hidden rounded shadow-lg">
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-        </div>
-        <div class="max-w-sm m-2 overflow-hidden rounded shadow-lg">
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-        </div>
-        <div class="max-w-sm m-2 overflow-hidden rounded shadow-lg">
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
-          <img
-            class="w-full"
-            src="https://source.unsplash.com/random/400x200"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-xl font-bold">Card title</div>
-            <p class="text-base text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus, dolores?
-            </p>
-          </div>
-          <div class="px-6 py-4 bg-gray-100">
-            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Click Me
-            </button>
-          </div>
+        <div className="w-full md:w-2/3 lg:w-3/4 flex flex-wrap">
+          {duplicatedCardsData.map((card, index) => (
+            <div key={index} className="w-2/3 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4 p-2">
+              <Card
+                {...card}
+              />
+            </div>
+          ))}
         </div>
       </main>
     </>

@@ -1,11 +1,17 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Menu() {
+  
   return (
-    <nav className="w-64 bg-green-200 h-screen mr-10">
-      <ul className="w-2/3 m-auto text-center">
+    <nav
+    className="w-64 bg-green-200 h-screen mr-10 flex flex-wrap"
+  >
+      <ul
+        className="w-2/3 m-auto text-center"
+      >
         <li className="mt-5">
           <Link href="/">MONICA TUTTLE</Link>
         </li>
