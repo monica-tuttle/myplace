@@ -7,7 +7,7 @@ export default function Menu() {
   
   return (
     <nav
-    className="w-64 bg-green-200 h-screen mr-10 flex flex-wrap"
+    className="w-full md:w-64 h-10 md:h-screen mr-10 flex flex-wrap bg-green-200"
   >
       <ul
         className="w-2/3 m-auto text-center"
