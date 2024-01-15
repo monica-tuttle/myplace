@@ -7,12 +7,12 @@ export default function Menu() {
   
   return (
     <nav
-    className="w-full md:w-64 h-10 md:h-screen mr-10 flex flex-wrap bg-green-200"
+    className="w-full md:w-64 h-20 md:h-screen flex flex-wrap bg-green-200"
   >
       <ul
         className="w-2/3 m-auto text-center"
       >
-        <li className="mt-5">
+        <li className="mt-5 hidden md:block">
           <Link href="/">MONICA TUTTLE</Link>
         </li>
         <li>
@@ -21,10 +21,10 @@ export default function Menu() {
             alt="profile picture"
             width={200}
             height={150}
-            className="mt-6 mb-5 rounded-md"
+            className="mt-6 mb-5 rounded-m hidden md:block"
           />
         </li>
-        <li className="mt-1">
+        <li className="mt-1 hidden md:block">
           <Link href="projects">PROJECTS</Link>
           <ul className="m-4">
             <li>Project 1</li>
@@ -37,14 +37,14 @@ export default function Menu() {
             <li>Project 8</li>
           </ul>
         </li>
-        <li>
+        <li className="hidden md:block">
           <Link href="about">ABOUT</Link>
         </li>
-        <li className="mt-1">
+        <li className="mt-1 hidden md:block">
           <Link href="contact">CONTACT</Link>
         </li>
       </ul>
-      <div className="m-auto w-2/3 grid grid-cols-3">
+      <div className="m-auto w-2/3 grid grid-cols-3 hidden md:block">
         <button>
           <Link href="https://gitlab.com/monica.tuttle16" target="_blank">
             <Image
