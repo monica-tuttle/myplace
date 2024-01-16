@@ -18,7 +18,7 @@ function Projects() {
 
   return (
     <>
-      <main className="bg-green-50 flex flex-wrap">
+      <main className="flex flex-wrap">
         <div className="w-full md:w-1/3 lg:w-1/4">
           <Menu />
         </div>

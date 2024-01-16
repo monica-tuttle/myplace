@@ -4,12 +4,11 @@ import React from "react";
 
 function About() {
   return (
-    <>
-    <main className="bg-green-50 grid grid-flow-col">
+    <main className="h-screen grid grid-flow-col">
       <Menu />
-      <div>
-        <h2 className="bg-blue-200 text-center mt-5 ml-5">About Me</h2>
-        <p className="bg-blue-200 p-10 ml-5">
+      <div className="mt-24 md:mt-10 md:ml-64 md:mr-10">
+        <h2 className="text-center">About Me</h2>
+        <p className="p-10 ml-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Pellentesque dignissim enim sit amet venenatis urna. Adipiscing elit
@@ -60,7 +59,6 @@ function About() {
         </p>
       </div>
       </main>
-    </>
   );
 }
 
