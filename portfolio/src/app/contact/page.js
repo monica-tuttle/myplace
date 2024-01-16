@@ -8,7 +8,7 @@ function Contact() {
       <main className="bg-green-50 grid grid-flow-col w-3/4">
         <Menu />
         <div>
-          <h2 className="text-center mt-16 mb-10 text-lg">Contact Me</h2>
+          <h2 className="text-center mt-20 mb-10 text-lg">Contact Me</h2>
 
           <form className="grid grid-cols-1 mt-4 text-lg">
             <label htmlFor="name">Name:</label>

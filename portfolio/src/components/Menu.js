@@ -7,12 +7,12 @@ export default function Menu() {
   
   return (
     <nav
-    className="w-full md:w-64 h-20 md:h-screen flex flex-wrap bg-green-200"
+    className="w-full md:w-64 h-20 md:h-screen absolute bg-green-200"
   >
       <ul
-        className="w-2/3 m-auto text-center"
+        className="w-2/3 ml-3 mt-2 md:m-auto text-left md:text-center"
       >
-        <li className="mt-5 hidden md:block">
+        <li className="mt-5">
           <Link href="/">MONICA TUTTLE</Link>
         </li>
         <li>
@@ -21,7 +21,7 @@ export default function Menu() {
             alt="profile picture"
             width={200}
             height={150}
-            className="mt-6 mb-5 rounded-m hidden md:block"
+            className="mt-6 mb-5 hidden md:block"
           />
         </li>
         <li className="mt-1 hidden md:block">
@@ -44,7 +44,7 @@ export default function Menu() {
           <Link href="contact">CONTACT</Link>
         </li>
       </ul>
-      <div className="m-auto w-2/3 grid grid-cols-3 hidden md:block">
+      <div className="m-auto w-2/3 grid grid-cols-3">
         <button>
           <Link href="https://gitlab.com/monica.tuttle16" target="_blank">
             <Image
@@ -52,11 +52,11 @@ export default function Menu() {
               alt="GitLab Logo"
               width={55}
               height={50}
-              className="mt-0.5"
+              className="mt-0.5 hidden md:block"
             />
           </Link>
         </button>
-        <button className="w-8 h-8 mx-2 mt-3">
+        <button className="w-8 h-8 mx-2 mt-3 hidden md:block">
           <Link
             href="https://www.linkedin.com/in/monica-tuttle/"
             target="_blank"
@@ -71,7 +71,7 @@ export default function Menu() {
             </svg>
           </Link>
         </button>
-        <button className="mt-0.5 ml-0.5">
+        <button className="mt-0.5 ml-0.5 hidden md:block">
           <Link
             href="https://github.com/monica-tuttle/coding_portfolio"
             target="_blank"
