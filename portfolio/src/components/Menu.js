@@ -1,27 +1,39 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Menu() {
-  
   return (
-    <nav
-    className="w-full md:w-64 h-20 md:h-screen absolute bg-green-200"
-  >
-      <ul
-        className="w-2/3 ml-3 mt-2 md:m-auto text-left md:text-center"
-      >
+    <nav className="w-full md:w-64 h-20 md:h-screen absolute bg-green-200">
+      <ul className="w-full ml-3 mt-2 md:m-auto grid grid-cols-2 md:grid-cols-1 text-left md:text-center">
         <li className="mt-5">
           <Link href="/">MONICA TUTTLE</Link>
+        </li>
+        <li className="text-right">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-10 h-10 mt-2 mr-8 md:hidden"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
         </li>
         <li>
           <Image
             src="/images/profile_pic.jpeg"
             alt="profile picture"
-            width={200}
-            height={150}
-            className="mt-6 mb-5 hidden md:block"
+            width={150}
+            height={100}
+            className="m-auto mb-5 hidden md:block"
           />
         </li>
         <li className="mt-1 hidden md:block">
