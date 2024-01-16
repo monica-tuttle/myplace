@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Menu() {
   return (
-    <nav className="w-full md:w-64 h-20 md:h-screen absolute bg-green-200">
+    <nav className="w-full md:w-64 md:h-screen absolute bg-green-200">
       <ul className="w-full ml-3 mt-2 md:m-auto grid grid-cols-2 md:grid-cols-1 text-left md:text-center">
         <li className="mt-5">
           <Link href="/">MONICA TUTTLE</Link>

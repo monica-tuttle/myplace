@@ -14,17 +14,20 @@ function Projects() {
   ];
 
   // Duplicate the card data to have a total of 8 cards
-  const duplicatedCardsData = Array.from({ length: 8 }, (_, index) => cardsData[index % cardsData.length]);
+  const duplicatedCardsData = Array.from({ length: 4 }, (_, index) => cardsData[index % cardsData.length]);
 
   return (
     <>
-      <main className="flex flex-wrap">
+      <main className="flex flex-wrap bg-purple-200">
         <div className="w-full md:w-1/3 lg:w-1/4">
           <Menu />
+
         </div>
+
         <div className="w-full md:w-2/3 lg:w-3/4 flex flex-wrap">
+          
           {duplicatedCardsData.map((card, index) => (
-            <div key={index} className="w-2/3 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4 p-2">
+            <div key={index} className="w-full sm:w-1/2">
               <Card
                 {...card}
               />
