@@ -39,15 +39,15 @@ export default function Menu() {
         </li>
         <li className="mt-1 hidden md:block">
           <Link href="projects">PROJECTS</Link>
-          <ul className="m-4">
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-            <li>Project 4</li>
-            <li>Project 5</li>
-            <li>Project 6</li>
-            <li>Project 7</li>
-            <li>Project 8</li>
+          <ul className="mx-10 my-3 text-left">
+            <li>1.  Protective Services</li>
+            <li>2.  211 Reporting</li>
+            <li>3.  Recruitment App</li>
+            <li>4.  Pothole Reporting</li>
+            <li>5.  Connect Four</li>
+            <li>6.  Refuge Restrooms</li>
+            <li>7.  Employee Attrition</li>
+            <li>8.  Inflation Forecasting</li>
           </ul>
         </li>
         <li className="hidden md:block">
