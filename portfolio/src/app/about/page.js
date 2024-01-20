@@ -4,7 +4,7 @@ import React from "react";
 
 function About() {
   return (
-    <main className="grid grid-flow-col">
+    <main className="grid grid-flow-col h-screen bg-green-50">
       <Menu />
       <div className="mt-24 md:mt-10 md:ml-56 md:mr-5">
         <h2 className="text-center">About Me</h2>
@@ -24,6 +24,10 @@ function About() {
           nec ultrices dui sapien eget mi. Vitae sapien pellentesque habitant
           morbi tristique. Tellus molestie nunc non blandit massa enim. Ut enim
           blandit volutpat maecenas volutpat blandit aliquam. Neque viverra
+          justo nec ultrices dui sapien eget. 
+          <br></br>
+          <br></br>
+          Neque viverra
           justo nec ultrices dui sapien eget. Eros in cursus turpis massa
           tincidunt dui ut. Natoque penatibus et magnis dis parturient. Maecenas
           ultricies mi eget mauris pharetra et.

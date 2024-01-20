@@ -2,10 +2,10 @@
 import React from "react";
 
 const Card = ({ imageSrc, title, description }) => (
-  <div className="max-w-lg overflow-hidden rounded shadow-lg">
+  <div className="w-full p-2 flex flex-wrap overflow-hidden rounded shadow-lg">
     <img className="w-full" src={imageSrc} alt={title} />
     <div>
-      <div className="text-xl font-bold">{title}</div>
+      <div className="text-l font-bold">{title}</div>
       <p className="text-base text-gray-700">{description}</p>
     </div>
     <div className="bg-gray-100">
@@ -15,6 +15,5 @@ const Card = ({ imageSrc, title, description }) => (
     </div>
   </div>
 );
-
 export default Card;
 
