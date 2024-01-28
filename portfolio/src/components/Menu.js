@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,11 +9,9 @@ export default function Menu() {
     <main>
       <nav className="w-full md:w-64 md:h-screen absolute bg-green-200">
         <ul className="w-full ml-3 mt-2 md:m-auto grid grid-cols-2 md:grid-cols-1 text-left md:text-center">
-          <li className="mt-5">MONICA TUTTLE</li>
-          <li className="text-right">
-            <button className="mr-10 md:hidden">
+          <li className="mt-3">MONICA TUTTLE</li>
+          <li className="text-right mr-5 md:hidden">
               <Dropdown />
-            </button>
           </li>
           <li>
             <Image
