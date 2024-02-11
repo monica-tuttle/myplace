@@ -9,7 +9,7 @@ export default function Menu() {
     <main>
       <nav className="w-full md:w-64 md:h-screen absolute bg-green-200">
         <ul className="w-full ml-3 mt-2 md:m-auto grid grid-cols-2 md:grid-cols-1 text-left md:text-center">
-          <li className="mt-3">MONICA TUTTLE</li>
+          <li className="mt-3 mb-4">MONICA TUTTLE</li>
           <li className="text-right mr-5 md:hidden">
               <Dropdown />
           </li>
@@ -19,29 +19,29 @@ export default function Menu() {
               alt="profile picture"
               width={150}
               height={100}
-              className="m-auto mb-5 hidden md:block"
+              className="m-auto mb-5 hidden md:block rounded-md"
             />
           </li>
           <li className="mt-1 hidden md:block">
             <Link href="projects" className="hover:text-purple-600">
               PROJECTS
             </Link>
-            <ul className="mx-10 my-3 text-left">
-              <li>1. Protective Services</li>
-              <li>2. 211 Reporting</li>
-              <li>3. Recruitment App</li>
-              <li>4. Pothole Reporting</li>
-              <li>5. Connect Four</li>
-              <li>6. Refuge Restrooms</li>
-              <li>7. Employee Attrition</li>
-              <li>8. Inflation Forecasting</li>
+            <ul className="mx-12 my-4 text-left list-disc">
+              <li>  Protective Services</li>
+              <li>  211 Reporting</li>
+              <li>  Recruitment App</li>
+              <li>  Pothole Reporting</li>
+              <li>  Connect Four</li>
+              <li>  Refuge Restrooms</li>
+              <li>  Employee Attrition</li>
+              <li>  Inflation Forecasting</li>
             </ul>
           </li>
           <li className="hidden md:block">
-            <Link href="about">ABOUT</Link>
+            <Link href="about" className="hover:text-purple-600">ABOUT</Link>
           </li>
           <li className="mt-1 hidden md:block">
-            <Link href="contact">CONTACT</Link>
+            <Link href="contact" className="hover:text-purple-600">CONTACT</Link>
           </li>
         </ul>
         <div className="m-auto w-2/3 grid grid-cols-3">
