@@ -10,6 +10,7 @@ const initialFormData = {
   message: "",
 };
 
+// useState Hook being used here to handle change in state between initial form data to updated form data
 const [formData, setFormData] = useState(initialFormData)
 function onSubmit(Data) {
   console.log(Data);
