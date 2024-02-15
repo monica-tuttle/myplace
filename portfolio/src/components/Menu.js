@@ -9,7 +9,7 @@ export default function Menu() {
     <main>
       <nav className="w-full md:w-64 md:h-screen absolute bg-green-200">
         <ul className="w-full ml-3 mt-2 md:m-auto grid grid-cols-2 md:grid-cols-1 text-left md:text-center">
-          <li className="mt-3 mb-4">MONICA TUTTLE</li>
+          <li className="mt-3 mb-4 font-cherry text-2xl text-purple-900">Monica Tuttle</li>
           <li className="text-right mr-5 md:hidden">
               <Dropdown />
           </li>
@@ -23,10 +23,10 @@ export default function Menu() {
             />
           </li>
           <li className="mt-1 hidden md:block">
-            <Link href="projects" className="hover:text-purple-600">
-              PROJECTS
+            <Link href="projects" className="font-quando text-purple-900 hover:text-purple-600">
+              Projects
             </Link>
-            <ul className="mx-12 my-4 text-left list-disc">
+            <ul className="mx-12 my-4 font-serif Georgia text-left list-disc">
               <li>  Protective Services</li>
               <li>  211 Reporting</li>
               <li>  Recruitment App</li>
@@ -38,10 +38,10 @@ export default function Menu() {
             </ul>
           </li>
           <li className="hidden md:block">
-            <Link href="about" className="hover:text-purple-600">ABOUT</Link>
+            <Link href="about" className="font-quando text-purple-900 hover:text-purple-600">About</Link>
           </li>
           <li className="mt-1 hidden md:block">
-            <Link href="contact" className="hover:text-purple-600">CONTACT</Link>
+            <Link href="contact" className="font-quando text-purple-900 hover:text-purple-600">Contact</Link>
           </li>
         </ul>
         <div className="m-auto w-2/3 grid grid-cols-3">

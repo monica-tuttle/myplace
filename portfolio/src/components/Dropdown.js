@@ -9,14 +9,14 @@ export default function Dropdown() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex rounded-md bg-green-200 px-3 py-2 font-semibold text-gray-900 hover:bg-green-300">
+        <Menu.Button className="inline-flex rounded-md bg-green-200 px-2 py-2 font-semibold text-gray-900 hover:bg-green-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
+            viewBox="0 0 20 20"
+            strokeWidth={2.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-8 text-purple-950"
           >
             <path
               strokeLinecap="round"
@@ -36,7 +36,7 @@ export default function Dropdown() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-36 origin-top-right font-quando rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (

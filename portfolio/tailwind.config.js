@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        patuaOne: ["Patua One", "sans-serif"],
+        quando: ["Quando"],
+        cherry: ["Cherry Swash"],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
