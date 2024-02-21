@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request) {
   try {
-    //const client = await db.connect(); // Moved inside the async function
+    const client = await db.connect(); // Moved inside the async function
     const result = await sql`CREATE TABLE IF NOT EXISTS contact_form (
           id SERIAL PRIMARY KEY,
           full_name VARCHAR(100) NOT NULL,

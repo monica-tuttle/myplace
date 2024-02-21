@@ -12,6 +12,6 @@ export async function GET(request) {
     return NextResponse.json({ error }, { status: 500 });
   }
  
-  const pets = await sql`SELECT * FROM contact_form;`;
+  const contacts = await sql`SELECT * FROM contact_form;`;
  ; return NextResponse.json({ contact_form }, { status: 200 });
 }
