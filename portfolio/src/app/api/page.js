@@ -1,7 +1,7 @@
 import { sql } from "@vercel/postgres";
 
 export default async function ContactForm({ params }) {
-  const { rows } = await sql`SELECT * from contact_form where user_id=${params.user}`;
+  const { rows } = await sql`SELECT * from contact_form where id=${params.user}`;
 
   return (
     <div>
