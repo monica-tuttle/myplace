@@ -7,14 +7,14 @@ export default async function handler(request) {
   }
 
   try {
-    const { name } = await request.json(); // Extract name from request body
+    const { name, email, message } = await request.json(); // Extract fields from request body
 
-    if (!name) {
-      throw new Error('Contact name is required');
+    if (!name || !email || !message) {
+      throw new Error('Name, email, and message are required');
     }
 
-    // Inserting the contact name into the database
-    await sql`INSERT INTO contact_form (Name) VALUES (${name})`;
+    // Inserting data into the database
+    await sql`INSERT INTO contact_form (Name, Email, Message) VALUES (${name}, ${email}, ${message})`;
 
     return NextResponse.json({ message: 'Contact added successfully' }, { status: 200 });
   } catch (error) {

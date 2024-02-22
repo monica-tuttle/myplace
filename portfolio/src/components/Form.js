@@ -26,7 +26,7 @@ async function onSubmit(event) {
   event.preventDefault();
 
   try {
-    const response = await fetch('/api/insertContact', {
+    const response = await fetch('/api/add-contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
