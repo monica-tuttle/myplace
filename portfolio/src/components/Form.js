@@ -12,15 +12,6 @@ const initialFormData = {
 
 // useState Hook being used here to handle change in state between initial form data to updated form data
 const [formData, setFormData] = useState(initialFormData)
-function onSubmit(Data) {
-  console.log(Data);
-}
-
-// Function to handle form submission
-function onSubmit(event) {
-  event.preventDefault(); // Prevent default form submission behavior
-  console.log(formData); // Log form data to the console
-}
 
  // Function to handle input changes and update form data state
  function handleInputChange(event) {
@@ -29,6 +20,29 @@ function onSubmit(event) {
     ...formData,
     [name]: value,
   });
+}
+
+async function onSubmit(event) {
+  event.preventDefault();
+
+  try {
+    const response = await fetch('/api/insertContact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+   // Reset form after successful submission
+   setFormData(initialFormData);
+   console.log('Form submitted successfully');
+ } catch (error) {
+   console.error('There was an error submitting the form:', error);
+ }
 }
 
   return (
