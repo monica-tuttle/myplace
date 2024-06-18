@@ -1,23 +1,41 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
-export default async function handler(request) {
-  if (request.method !== 'POST') {
-    return NextResponse.error(new Error('Method Not Allowed'), { status: 405 });
-  }
+// Ensure your environment variables are loaded
+if (!process.env.POSTGRES_URL) {
+  throw new Error('Missing POSTGRES_URL environment variable');
+}
 
+export async function POST(request) {
   try {
-    const { name, email, message } = await request.json(); // Extract fields from request body
+    const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
-      throw new Error('Name, email, and message are required');
+      return NextResponse.json({ error: 'Name, email, and message are required' }, { status: 400 });
     }
-    // Inserting data into the database
+
+    // Using the sql instance which should already use the POSTGRES_URL
     await sql`INSERT INTO contact_form (Name, Email, Message) VALUES (${name}, ${email}, ${message})`;
 
     return NextResponse.json({ message: 'Contact added successfully' }, { status: 200 });
   } catch (error) {
     console.error('Error adding contact:', error);
-    return NextResponse.error(new Error('Internal Server Error'), { status: 500 });
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
+}
+
+export function methodNotAllowed() {
+  return NextResponse.json({ error: 'Method Not Allowed' }, { status: 405 });
+}
+
+export async function GET() {
+  return methodNotAllowed();
+}
+
+export async function PUT() {
+  return methodNotAllowed();
+}
+
+export async function DELETE() {
+  return methodNotAllowed();
 }

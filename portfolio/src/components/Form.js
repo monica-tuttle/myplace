@@ -1,49 +1,45 @@
-"use client";
+'use client';
 import { useState } from 'react';
 
 export default function Form() {
+  const initialFormData = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
-  // Sample form data
-const initialFormData = {
-  name: "",
-  email: "",
-  message: "",
-};
+  const [formData, setFormData] = useState(initialFormData);
 
-// useState Hook being used here to handle change in state between initial form data to updated form data
-const [formData, setFormData] = useState(initialFormData)
-
- // Function to handle input changes and update form data state
- function handleInputChange(event) {
-  const { name, value } = event.target;
-  setFormData({
-    ...formData,
-    [name]: value,
-  });
-}
-
-async function onSubmit(event) {
-  event.preventDefault();
-
-  try {
-    const response = await fetch('/api/add-contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
+  }
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+  async function onSubmit(event) {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('/api/add-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      // Reset form after successful submission
+      setFormData(initialFormData);
+      console.log('Form submitted successfully');
+    } catch (error) {
+      console.error('There was an error submitting the form:', error);
     }
-   // Reset form after successful submission
-   setFormData(initialFormData);
-   console.log('Form submitted successfully');
- } catch (error) {
-   console.error('There was an error submitting the form:', error);
- }
-}
+  }
 
   return (
     <form className="m-auto md:ml-80 md:pr-32 w-3/4 grid text-lg" onSubmit={onSubmit}>
@@ -56,7 +52,6 @@ async function onSubmit(event) {
         name="name"
         value={formData.name}
         onChange={handleInputChange}
-        
       />
       <label htmlFor="email">Email:</label>
       <input
@@ -68,7 +63,6 @@ async function onSubmit(event) {
         onChange={handleInputChange}
         required
       />
-
       <label htmlFor="message">Message:</label>
       <textarea
         className="bg-green-200 p-2 rounded md text-lg mt-3 mb-3"
