@@ -35,7 +35,22 @@ export default function Menu() {
               href="projects"
               className="font-quando text-purple-900 hover:text-purple-600"
             >
-              Projects
+              Poems
+            </Link>
+            <ul className="mx-12 my-4 font-serif Georgia text-left list-disc">
+              <li> Insomnia </li>
+              <li> Eyes </li>
+              <li> Passage of time</li>
+              <li> Caregiver </li>
+              <li> Friends </li>
+            </ul>
+          </li>
+          <li className="hidden md:block">
+            <Link
+              href="/"
+              className="font-quando text-purple-900 hover:text-purple-600"
+            > 
+             {/* Projects
             </Link>
             <ul className="mx-12 my-4 font-serif Georgia text-left list-disc">
               <li> Protective Services</li>
@@ -52,7 +67,7 @@ export default function Menu() {
             <Link
               href="/"
               className="font-quando text-purple-900 hover:text-purple-600"
-            >
+            > */}
               About
             </Link>
           </li>
